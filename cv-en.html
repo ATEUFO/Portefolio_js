@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume — Arthur TSOGMO ATEUFO (EN)</title>
+    <meta name="description" content="English Resume — Arthur TSOGMO ATEUFO" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0a0d14;
+        --muted: #516072;
+        --line: #dbe3ef;
+        --accent: #2563eb;
+        --accent-2: #7c3aed;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: Manrope, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans",
+          "Liberation Sans", sans-serif;
+        color: var(--ink);
+        background: radial-gradient(900px 500px at 15% 0%, rgba(37, 99, 235, 0.10), transparent 55%),
+          radial-gradient(900px 500px at 85% 0%, rgba(124, 58, 237, 0.10), transparent 55%),
+          linear-gradient(180deg, #ffffff, #f6f8fc);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .page {
+        max-width: 980px;
+        margin: 24px auto;
+        padding: 18px;
+      }
+      .toolbar {
+        position: sticky;
+        top: 12px;
+        z-index: 10;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid rgba(10, 13, 20, 0.10);
+        background: rgba(255, 255, 255, 0.82);
+        backdrop-filter: blur(10px);
+        border-radius: 14px;
+        padding: 10px 12px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 12px;
+        border: 1px solid rgba(10, 13, 20, 0.12);
+        background: #ffffff;
+        padding: 10px 12px;
+        font-weight: 700;
+        font-size: 13px;
+      }
+      .btn-primary {
+        border-color: rgba(37, 99, 235, 0.35);
+        background: radial-gradient(220px 90px at 20% 20%, rgba(37, 99, 235, 0.18), rgba(255, 255, 255, 0.9));
+      }
+      .btn-ghost {
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .card {
+        margin-top: 14px;
+        border-radius: 18px;
+        border: 1px solid rgba(10, 13, 20, 0.10);
+        background: rgba(255, 255, 255, 0.85);
+        padding: 18px;
+      }
+      .header {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 14px;
+        align-items: start;
+      }
+      .name {
+        font-size: 34px;
+        line-height: 1.05;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+      .role {
+        margin-top: 10px;
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .chip {
+        border-radius: 999px;
+        border: 1px solid rgba(10, 13, 20, 0.12);
+        padding: 6px 10px;
+        font-size: 12px;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.9);
+      }
+      .right {
+        border-left: 1px solid var(--line);
+        padding-left: 14px;
+      }
+      .k {
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 800;
+      }
+      .v {
+        margin-top: 6px;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .grid {
+        margin-top: 14px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      h2 {
+        margin: 0;
+        font-size: 13px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: var(--muted);
+      }
+      .section {
+        margin-top: 14px;
+      }
+      .item {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px dashed var(--line);
+      }
+      .item:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+      .title {
+        font-weight: 900;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 12.5px;
+        margin-top: 4px;
+      }
+      ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+      li {
+        margin: 6px 0;
+        color: #223042;
+      }
+      .footer {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      @media (max-width: 880px) {
+        .header {
+          grid-template-columns: 1fr;
+        }
+        .right {
+          border-left: 0;
+          padding-left: 0;
+          border-top: 1px solid var(--line);
+          padding-top: 14px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media print {
+        body {
+          background: #ffffff !important;
+        }
+        .page {
+          margin: 0;
+          padding: 0;
+        }
+        .toolbar {
+          display: none !important;
+        }
+        .card {
+          border: 0;
+          background: transparent;
+          padding: 0;
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="toolbar">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center">
+          <a class="btn btn-ghost" href="./index.html#contact">← Back to portfolio</a>
+          <a class="btn" href="./cv-fr.html" rel="noreferrer">FR version</a>
+        </div>
+        <button class="btn btn-primary" type="button" onclick="window.print()">Print / Save as PDF</button>
+      </div>
+
+      <div class="card">
+        <div class="header">
+          <div>
+            <h1 class="name">Arthur TSOGMO ATEUFO</h1>
+            <div class="role">
+              Full‑Stack Software Engineer — Solving enterprise problems through automation and AI. 
+              System performance (C/C++), cinematic UI (GSAP), data (SQL/NoSQL), and Web3 integrations.
+            </div>
+            <div class="chips">
+              <span class="chip">Cameroon</span>
+              <span class="chip">Full‑Stack</span>
+              <span class="chip">UML</span>
+              <span class="chip">SQL/NoSQL</span>
+              <span class="chip">Web3</span>
+              <span class="chip">Cybersecurity (Cisco)</span>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="k">Contact</div>
+            <div class="v">
+              Email: <a href="mailto:ateufoarthur@gmail.com"><b>ateufoarthur@gmail.com</b></a><br />
+              WhatsApp: <a href="https://wa.me/237655354116" target="_blank" rel="noreferrer"><b>+237 655 35 41 16</b></a><br />
+              LinkedIn:
+              <a href="https://www.linkedin.com/in/arthur-ateufo-0923172a2" target="_blank" rel="noreferrer"
+                ><b>arthur-ateufo</b></a
+              ><br />
+              GitHub: <a href="https://www.github.com/ATEUFO" target="_blank" rel="noreferrer"><b>ATEUFO</b></a>
+            </div>
+            <div class="k" style="margin-top: 12px">Services</div>
+            <div class="v">Backend/API • Data • Web3 • Premium Frontend</div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="section">
+            <h2>Education</h2>
+            <div class="item">
+              <div class="title">Engineering Cycle — Software Engineering (3rd year)</div>
+              <div class="meta">2023 — Present • IAI‑Cameroon, Yaoundé</div>
+              <ul>
+                <li>Advanced algorithms, IS architecture, Big Data (Hadoop/MapReduce), ML fundamentals.</li>
+                <li>UML modeling: class, sequence, use‑case, state diagrams.</li>
+              </ul>
+            </div>
+            <div class="item">
+              <div class="title">Higher Technician Diploma (Bac +2 equivalent)</div>
+              <div class="meta">Foundations: programming, maintenance, networks, basic administration</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Certifications</h2>
+            <div class="item">
+              <div class="title">Cisco — Cyber Threats: Content & Process</div>
+              <div class="meta">Attack vectors and modern defense mechanisms</div>
+            </div>
+            <div class="item">
+              <div class="title">Cisco — Introduction to Cybersecurity</div>
+              <div class="meta">Data security, privacy, and network protection fundamentals</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="section">
+            <h2>Experience</h2>
+            <div class="item">
+              <div class="title">Software Developer & AI Intern — Dowhile Sarl</div>
+              <div class="meta">March — June 2025</div>
+              <ul>
+                <li>Automation of complex business processes.</li>
+                <li>Design and integration of AI modules for decision support.</li>
+                <li>Operational workflow optimization.</li>
+              </ul>
+            </div>
+            <div class="item">
+              <div class="title">Software Developer & AI Integrator — Internship (3 months)</div>
+              <div class="meta">Intelligent e‑commerce chatbot</div>
+              <ul>
+                <li>Designed bot architecture and decision trees.</li>
+                <li>Integrated NLP components for language understanding.</li>
+                <li>Connected product/stock catalog for real‑time answers.</li>
+                <li>Impact: faster response time, 24/7 assistance.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Skills</h2>
+            <div class="item">
+              <div class="title">Backend & APIs</div>
+              <div class="meta">Node.js (Express/Fastify), Django, Java</div>
+            </div>
+            <div class="item">
+              <div class="title">Databases</div>
+              <div class="meta">PostgreSQL, MySQL, MongoDB, Realm</div>
+            </div>
+            <div class="item">
+              <div class="title">Frontend</div>
+              <div class="meta">HTML/CSS, React/React Native, GSAP</div>
+            </div>
+            <div class="item">
+              <div class="title">Systems & Engineering</div>
+              <div class="meta">Linux/Bash, Git, UML, SDLC</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Projects</h2>
+          <div class="item">
+            <div class="title">Planora — School Scheduling System</div>
+            <div class="meta">Electron • React • Node • MongoDB • Realm</div>
+          </div>
+          <div class="item">
+            <div class="title">E‑ticketer — Decentralized Web3 Ticketing</div>
+            <div class="meta">Ethereum/Polygon • Solidity • NFTs • MySQL/PostgreSQL</div>
+          </div>
+          <div class="item">
+            <div class="title">AI‑powered Currency Evaluator</div>
+            <div class="meta">Python • Data • ML (time series)</div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <span>Document: Resume EN • 2026</span>
+          <span>Tip: “Print” → “Save as PDF”</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
