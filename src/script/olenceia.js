@@ -152,6 +152,47 @@ function wireThemeOnScroll() {
   });
 }
 
+function wireMobileMenu() {
+  const toggle = $("#mobile-menu-toggle");
+  const menu = $("#mobile-menu");
+  const menuIcon = $(".menu-icon", toggle);
+  const closeIcon = $(".close-icon", toggle);
+  const links = $$(".mobile-nav-link", menu);
+
+  if (!toggle || !menu) return;
+
+  function toggleMenu() {
+    const isOpen = menu.classList.contains("active");
+    if (isOpen) {
+      menu.classList.remove("active");
+      menuIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+      document.body.classList.remove("body-lock");
+      setTimeout(() => {
+        menu.classList.add("hidden");
+      }, 300);
+    } else {
+      menu.classList.remove("hidden");
+      document.body.classList.add("body-lock");
+      // Force reflow
+      menu.offsetHeight;
+      menu.classList.add("active");
+      menuIcon.classList.add("hidden");
+      closeIcon.classList.remove("hidden");
+    }
+  }
+
+  toggle.addEventListener("click", toggleMenu);
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (menu.classList.contains("active")) {
+        toggleMenu();
+      }
+    });
+  });
+}
+
 function boot() {
   const y = $("#year");
   if (y) y.textContent = String(new Date().getFullYear());
@@ -165,6 +206,7 @@ function boot() {
   animateTerminalLines();
   animateSections();
   wireThemeOnScroll();
+  wireMobileMenu();
 
   ScrollTrigger.refresh();
 }

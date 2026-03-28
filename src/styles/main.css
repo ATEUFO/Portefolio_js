@@ -32,6 +32,7 @@ body {
   background: rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 .skip-link:focus {
   left: 12px;
 }
@@ -83,11 +84,13 @@ body {
   left: -18vmax;
   top: -20vmax;
 }
+
 .blob-b {
   right: -22vmax;
   top: -12vmax;
   opacity: 0.4;
 }
+
 .blob-c {
   left: 10vmax;
   bottom: -28vmax;
@@ -245,10 +248,12 @@ body {
   color: rgba(255, 255, 255, 0.86);
   transition: transform 200ms ease, background 200ms ease, border-color 200ms ease;
 }
+
 .chip:hover {
   transform: translateY(-1px);
   border-color: rgba(255, 255, 255, 0.20);
 }
+
 .chip-primary {
   border-color: hsl(var(--theme-hsl) / 0.45);
   background: radial-gradient(240px 90px at 20% 20%, hsl(var(--theme-hsl) / 0.35), rgba(255, 255, 255, 0.06));
@@ -261,11 +266,13 @@ body {
   color: rgba(255, 255, 255, 0.72);
   transition: background 200ms ease, color 200ms ease, transform 200ms ease;
 }
+
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.06);
   color: rgba(255, 255, 255, 0.92);
   transform: translateY(-1px);
 }
+
 .nav-link.is-active {
   color: #ffffff;
   background: radial-gradient(260px 80px at 20% 30%, hsl(var(--theme-hsl) / 0.4), rgba(255, 255, 255, 0.1));
@@ -285,11 +292,13 @@ body {
   color: rgba(255, 255, 255, 0.9);
   transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
 }
+
 .btn:hover {
   transform: translateY(-2px);
   border-color: rgba(255, 255, 255, 0.22);
   background: rgba(255, 255, 255, 0.09);
 }
+
 .btn:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
@@ -301,7 +310,9 @@ body {
 }
 
 /* Button & Link specific styles */
-a.btn, a.nav-link, a.contact {
+a.btn,
+a.nav-link,
+a.contact {
   --btn-bg: hsl(var(--theme-hsl) / 0.12);
   --btn-border: hsl(var(--theme-hsl) / 0.5);
   --btn-text: hsl(var(--theme-hsl));
@@ -334,8 +345,17 @@ a.btn-primary {
 }
 
 @keyframes exciting {
-  0%, 100% { transform: scale(1); filter: brightness(1); }
-  50% { transform: scale(1.04); filter: brightness(1.2); }
+
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+    filter: brightness(1.2);
+  }
 }
 
 .btn-ghost {
@@ -349,10 +369,27 @@ a.btn-primary {
 }
 
 @keyframes excite {
-  10%, 90% { transform: translate3d(-1px, -2px, 0) scale(1.02); }
-  20%, 80% { transform: translate3d(2px, -2px, 0) scale(1.02); }
-  30%, 50%, 70% { transform: translate3d(-3px, -2px, 0) scale(1.02); }
-  40%, 60% { transform: translate3d(3px, -2px, 0) scale(1.02); }
+
+  10%,
+  90% {
+    transform: translate3d(-1px, -2px, 0) scale(1.02);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, -2px, 0) scale(1.02);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, -2px, 0) scale(1.02);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(3px, -2px, 0) scale(1.02);
+  }
 }
 
 .btn-icon {
@@ -372,12 +409,14 @@ a.btn-primary {
   background: rgba(255, 255, 255, 0.04);
   padding: 12px 12px;
 }
+
 .stat-k {
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.55);
 }
+
 .stat-v {
   margin-top: 3px;
   font-size: 14px;
@@ -443,6 +482,7 @@ a.btn-primary {
   background: rgba(0, 0, 0, 0.22);
   overflow: hidden;
 }
+
 .marquee-track {
   display: flex;
   gap: 24px;
@@ -454,10 +494,12 @@ a.btn-primary {
   font-size: 11px;
   animation: marquee 18s linear infinite;
 }
+
 @keyframes marquee {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-33.333%);
   }
@@ -473,15 +515,18 @@ html[data-fx="on"] .card::before,
 html[data-fx="on"] .project-card::before {
   animation: sheen 6s ease-in-out infinite;
 }
+
 @keyframes sheen {
   0% {
     opacity: 0.35;
     filter: blur(0px);
   }
+
   50% {
     opacity: 0.75;
     filter: blur(0.5px);
   }
+
   100% {
     opacity: 0.35;
     filter: blur(0px);
@@ -504,9 +549,11 @@ html[data-fx="on"] .project-card::before {
   display: grid;
   gap: 18px;
 }
+
 .timeline-item {
   position: relative;
 }
+
 .timeline-meta {
   display: flex;
   flex-wrap: wrap;
@@ -524,6 +571,7 @@ html[data-fx="on"] .project-card::before {
   overflow: hidden;
   width: 100%;
 }
+
 .projects-track {
   display: flex;
   gap: 24px;
@@ -531,6 +579,7 @@ html[data-fx="on"] .project-card::before {
   width: max-content;
   will-change: transform;
 }
+
 .project-card {
   flex: 0 0 min(420px, 86vw);
   border-radius: 22px;
@@ -540,6 +589,7 @@ html[data-fx="on"] .project-card::before {
   position: relative;
   overflow: hidden;
 }
+
 .project-card::before {
   content: "";
   position: absolute;
@@ -554,30 +604,36 @@ html[data-fx="on"] .project-card::before {
   opacity: 0.55;
   pointer-events: none;
 }
+
 .project-card-highlight {
   border-color: hsl(var(--theme-hsl) / 0.50);
 }
+
 .project-top {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 14px;
 }
+
 .project-title {
   font-weight: 800;
   letter-spacing: -0.01em;
   font-size: 18px;
 }
+
 .project-sub {
   color: rgba(255, 255, 255, 0.62);
   font-size: 12px;
 }
+
 .project-tags {
   margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
+
 .tag {
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -586,10 +642,12 @@ html[data-fx="on"] .project-card::before {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.82);
 }
+
 .tag-lg {
   padding: 9px 12px;
   font-weight: 600;
 }
+
 .project-body {
   margin-top: 14px;
   color: rgba(255, 255, 255, 0.80);
@@ -603,6 +661,7 @@ html[data-fx="on"] .project-card::before {
   background: rgba(255, 255, 255, 0.04);
   padding: 12px 12px;
 }
+
 .skill-k {
   font-size: 12px;
   font-weight: 800;
@@ -610,6 +669,7 @@ html[data-fx="on"] .project-card::before {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.65);
 }
+
 .skill-v {
   margin-top: 6px;
   color: rgba(255, 255, 255, 0.82);
@@ -626,14 +686,17 @@ html[data-fx="on"] .project-card::before {
   padding: 12px 14px;
   transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
 }
+
 .contact:hover {
   transform: translateY(-2px);
   border-color: rgba(255, 255, 255, 0.20);
   background: rgba(255, 255, 255, 0.08);
 }
+
 .contact-k {
   font-weight: 800;
 }
+
 .contact-v {
   color: rgba(255, 255, 255, 0.70);
   text-align: right;
@@ -644,6 +707,7 @@ html[data-fx="on"] .project-card::before {
   html {
     scroll-behavior: auto;
   }
+
   .hover-card,
   .btn,
   .chip,
@@ -652,4 +716,3 @@ html[data-fx="on"] .project-card::before {
     transition: none !important;
   }
 }
-
