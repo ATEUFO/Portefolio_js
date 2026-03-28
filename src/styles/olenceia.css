@@ -1,0 +1,211 @@
+/* Olenceia — page entreprise (complète main.css) */
+
+.olence-page {
+  --olence-accent: 168 84% 48%;
+}
+
+.olence-header-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.code-dock {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, rgba(12, 18, 32, 0.95), rgba(4, 8, 16, 0.98));
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  overflow: hidden;
+}
+
+.code-dock-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.code-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+}
+.code-dot-r {
+  background: #ff5f56;
+}
+.code-dot-y {
+  background: #ffbd2e;
+}
+.code-dot-g {
+  background: #27c93f;
+}
+
+.code-dock-title {
+  margin-left: 8px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.code-body {
+  padding: 16px 18px 20px;
+  font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+  min-height: 220px;
+}
+
+.code-line {
+  opacity: 0;
+  transform: translateX(-8px);
+}
+
+.code-k {
+  color: #7dd3fc;
+}
+.code-s {
+  color: #a7f3d0;
+}
+.code-c {
+  color: rgba(255, 255, 255, 0.38);
+}
+.code-fn {
+  color: #fde68a;
+}
+.code-num {
+  color: #fca5a5;
+}
+
+.olence-img-wrap {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.olence-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.olence-img-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.olence-img-caption {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  right: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.service-card-olence {
+  position: relative;
+}
+
+.service-card-olence .service-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.service-card-olence .service-icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.tech-orbit {
+  position: relative;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: radial-gradient(800px 400px at 50% 0%, hsl(var(--theme-hsl) / 0.15), transparent 55%),
+    rgba(0, 0, 0, 0.2);
+  padding: 28px 20px;
+  overflow: hidden;
+}
+
+.tech-orbit-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tech-pill-olence {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: nowrap;
+}
+
+.olence-marquee-wrap {
+  margin-top: 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+}
+
+.olence-marquee-track {
+  display: flex;
+  gap: 32px;
+  padding: 14px 18px;
+  white-space: nowrap;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  animation: olence-marquee 28s linear infinite;
+}
+
+@keyframes olence-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .olence-marquee-track {
+    animation: none;
+  }
+}
+
+.olence-glow-blob {
+  position: absolute;
+  z-index: 0;
+  width: min(60vw, 480px);
+  height: min(60vw, 480px);
+  border-radius: 999px;
+  filter: blur(70px);
+  opacity: 0.45;
+  pointer-events: none;
+  background: radial-gradient(circle at 40% 40%, hsl(var(--theme-hsl) / 0.55), transparent 62%);
+}
