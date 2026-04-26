@@ -5,9 +5,22 @@
 }
 
 .olence-header-logo {
-  height: 36px;
+  height: 24px;
   width: auto;
   object-fit: contain;
+  transition: height 0.3s ease; 
+}
+
+@media (min-width: 640px) {
+  .olence-header-logo {
+    height: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .olence-header-logo {
+    height: 36px;
+  }
 }
 
 .code-dock {
@@ -223,6 +236,7 @@
   display: flex;
   transform: translateY(0);
 }
+
 
 .body-lock {
   overflow: hidden;
