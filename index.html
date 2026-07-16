@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="fr" class="olence-page">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="dark" />
+  <meta name="color-scheme" content="light dark" />
   <title>Olence IA — Automatisation &amp; intelligence artificielle</title>
   <meta name="description"
-    content="Olence IA conçoit des systèmes d'automatisation et d'IA : workflows n8n, agents OpenClaw, chatbots métiers, MCP, architectures microservices." />
+    content="Olence IA conçoit des systèmes d'automatisation et d'IA : workflows n8n, agents IA, chatbots métiers, analyse de données." />
 
   <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="./assets/favicon.ico" />
@@ -17,457 +17,332 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
-  <script src="./src/script/tailwind.js"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ["Manrope", "ui-sans-serif", "system-ui"] },
-        },
-      },
-    };
-  </script>
-
-  <link rel="stylesheet" href="./src/styles/main.css" />
-  <link rel="stylesheet" href="./src/styles/olenceia.css" />
+  <link rel="stylesheet" href="./src/styles/olence.css" />
 </head>
 
-<body class="min-h-screen bg-[#070A12] text-white antialiased">
-  <a class="skip-link" href="#contenu-olence">Aller au contenu</a>
+<body>
+  <a class="o-skip" href="#contenu-olence">Aller au contenu</a>
 
-  <div id="bg" aria-hidden="true">
-    <div class="bg-grid"></div>
-    <div class="bg-noise"></div>
-    <div class="bg-blobs">
-      <div class="blob blob-a"></div>
-      <div class="blob blob-b"></div>
-      <div class="blob blob-c"></div>
-    </div>
-    <div class="spotlight" id="spotlight"></div>
-  </div>
+  <!-- Fond image fixe (dark / light selon préférences navigateur) -->
+  <div id="olence-bg" aria-hidden="true"></div>
 
-  <header class="fixed top-0 left-0 right-0 z-50">
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="mt-4 rounded-2xl border border-white/10 bg-black/30 backdrop-blur-xl">
-        <div class="flex items-center justify-between px-4 py-3">
-          <a href="#olence-hero"
-            class="flex items-center gap-3 rounded-xl px-2 py-2 focus:outline-none focus:ring-2 focus:ring-white/40">
-            <img src="./assets/olenceia.png" alt="Olence IA" class="olence-header-logo" width="120" height="36"
-              loading="eager" />
-            <span class="text-sm font-semibold tracking-wide text-white/90">Olence IA</span>
-          </a>
+  <main id="contenu-olence">
 
-          <nav class="hidden items-center gap-1 md:flex" aria-label="Navigation Olence IA">
-            <a class="nav-link" href="#olence-manifeste">Vision</a>
-            <a class="nav-link" href="#olence-stack">Stack</a>
-            <a class="nav-link" href="#olence-services">Services</a>
-            <a class="nav-link" href="#olence-archi">Architecture</a>
-            <a class="nav-link" href="#olence-contact">Contact</a>
-          </nav>
+    <!-- ═══════════════════════════════════════════════════════════════
+         HERO — Logo + accroche
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="hero o-section" id="olence-hero" aria-label="Page d'accueil Olence IA">
+      <div class="o-container">
 
-          <div class="flex items-center gap-2">
-            <button id="mobile-menu-toggle"
-              class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white md:hidden"
-              aria-label="Ouvrir le menu">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="close-icon hidden">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-          </div>
+        <img
+          class="hero__logo"
+          src="./assets/olenceia.png"
+          alt="Olence IA — Logo"
+          width="160"
+          height="160"
+          loading="eager" />
+
+        <!-- <div class="hero__badge">
+          <span class="o-badge">
+            <span class="o-badge-dot" aria-hidden="true"></span>
+            Automatisation &bull; IA appliquée &bull; Intégrations métiers
+          </span>
+        </div> -->
+
+        <h1 class="hero__title">
+          <span>Olence IA</span>
+        </h1>
+
+        <p class="hero__tagline">
+          Ton entreprise fonctionne… mais elle ne te rend <strong>pas riche</strong>.
+        </p>
+
+        <p class="hero__impact">
+          <strong class="stop">⛔ Arrête</strong>
+          d'<strong>échanger ton temps contre de l'argent</strong>
+          — laisse <strong class="o-orange">Olence IA</strong> générer des
+          <strong>revenus en continu</strong> pour toi.
+        </p>
+
+        <div class="hero__cta">
+          <a class="o-btn o-btn-primary" href="#olence-services">Découvrir nos services</a>
+          <a class="o-btn" href="#olence-contact">Nous contacter</a>
         </div>
-      </div>
-    </div>
 
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu"
-      class="fixed inset-0 z-40 hidden translate-y-[-100%] bg-[#070A12]/95 backdrop-blur-2xl transition-transform duration-300 md:hidden">
-      <div class="flex h-full flex-col p-8 pt-24">
-        <nav class="flex flex-col gap-6 text-2xl font-bold">
-          <a class="mobile-nav-link text-white/70 hover:text-white" href="#olence-manifeste">Vision</a>
-          <a class="mobile-nav-link text-white/70 hover:text-white" href="#olence-stack">Stack</a>
-          <a class="mobile-nav-link text-white/70 hover:text-white" href="#olence-services">Services</a>
-          <a class="mobile-nav-link text-white/70 hover:text-white" href="#olence-archi">Architecture</a>
-          <a class="mobile-nav-link text-white/70 hover:text-white" href="#olence-contact">Contact</a>
-        </nav>
-        <div class="mt-auto border-t border-white/10 pt-8">
-          <a class="flex items-center justify-center rounded-2xl bg-white px-6 py-4 text-center font-bold text-black"
-            href="./src/html/portfolio.html#contact">
-            Portfolio Arthur ATEUFO
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
+        <p class="hero__scroll-hint" aria-hidden="true">
+          <span></span>
+          Défiler
+        </p>
 
-  <main id="contenu-olence" class="relative">
-    <!-- HERO -->
-    <section id="olence-hero" class="section relative z-[1] pt-36 md:pt-44" data-theme="168 84% 48%"
-      data-theme-name="Émeraude IA">
-      <div class="olence-glow-blob -left-32 -top-20" aria-hidden="true"></div>
-      <div class="mx-auto max-w-6xl px-4">
-        <div id="olence-hero-inner" class="grid gap-12 lg:grid-cols-12 lg:items-center">
-          <div class="lg:col-span-6">
-            <div
-              class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80">
-              <span class="inline-block h-1.5 w-1.5 rounded-full bg-[hsl(var(--theme-hsl))]"></span>
-              Automatisation • IA appliquée • Intégrations métiers
-            </div>
-
-            <h1 class="mt-5 text-balance text-4xl font-extrabold leading-[1.08] md:text-5xl lg:text-6xl">
-              <span class="gradient-text">Olence IA</span>
-            </h1>
-            <p class="mt-4 max-w-xl text-pretty text-xl md:text-2xl leading-relaxed text-white/90">
-              Ton entreprise fonctionne… mais elle ne te rend <strong class="text-white">pas riche</strong>.
-            </p>
-            <p class="mt-4 max-w-xl text-pretty text-lg md:text-xl leading-relaxed text-white/80">
-              <strong class="text-red-500">⛔ Arrête</strong> d’<strong class="text-white">échanger ton temps contre de l’argent</strong> — laisse <strong class="text-white">Olence IA</strong> générer des <strong class="text-white">revenus en continu</strong> pour toi.
-            </p>
-
-            <div class="mt-8 flex flex-wrap items-center gap-3">
-              <a class="btn btn-primary" href="#olence-services">
-                Explorer les services
-                <span aria-hidden="true" class="btn-icon">↓</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="relative lg:col-span-6">
-            <div class="portrait-frame overflow-visible p-5">
-              <div class="portrait-glow" aria-hidden="true"></div>
-              <img id="olence-logo-hero" src="./assets/olenceia.png" alt="Logo Olence IA"
-                class="relative z-[1] mx-auto w-full max-w-md object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
-                loading="eager" />
-              <div class="portrait-badge">
-                <div class="text-xs text-white/70">Positionnement</div>
-                <div class="text-sm font-semibold">IA de terrain, pas seulement des slides</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- MANIFESTE + TERMINAL -->
-    <section id="olence-manifeste" class="section" data-theme="200 95% 55%" data-theme-name="Cyan workflow">
-      <div class="mx-auto max-w-6xl px-4">
-        <div class="section-head">
-          <p class="eyebrow">Manifeste technique</p>
-          <h2 class="h2">Du besoin métier au système qui tourne.</h2>
-          <p class="lead">
-            Nous combinons orchestration (n8n), agents IA (OpenClaw), protocoles ouverts (MCP) et design d’API pour que
-            l’automatisation reste <span class="text-white">auditée, sécurisée et maintenable</span>.
-          </p>
-        </div>
+    <!-- ═══════════════════════════════════════════════════════════════
+         INTRO — Chiffres clés + image
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="intro o-section" id="olence-intro" aria-label="Pourquoi Olence IA">
+      <div class="o-container">
+        <div class="intro__inner">
+          <!-- Texte -->
+          <div data-reveal>
+            <p class="o-eyebrow">Pourquoi nous choisir</p>
+            <h2 class="o-h2" style="margin-top:0.75rem;">
+              De la friction zéro à la valeur récurrente.
+            </h2>
+            <p class="o-lead" style="margin-top:1rem;">
+              L'automatisation intelligente réduit les ressaisies, supprime les erreurs humaines
+              et libère vos équipes pour ce qui compte vraiment.
+            </p>
 
-        <div class="grid gap-8 lg:grid-cols-2">
-          <div id="olence-terminal" class="code-dock" data-reveal>
-            <div class="code-dock-top">
-              <span class="code-dot code-dot-r" aria-hidden="true"></span>
-              <span class="code-dot code-dot-y" aria-hidden="true"></span>
-              <span class="code-dot code-dot-g" aria-hidden="true"></span>
-              <span class="code-dock-title">olenceia / orchestration.ts</span>
-            </div>
-            <div class="code-body" aria-label="Extrait de code illustratif">
-              <div class="code-line"><span class="code-k">import</span> <span class="code-s">{ pipeline }</span> <span
-                  class="code-k">from</span> <span class="code-s">'@olenceia/core'</span><span class="code-c">;</span>
+            <div class="intro__numbers">
+              <div class="intro__stat">
+                <div class="intro__stat-n">−70%</div>
+                <div class="intro__stat-l">Temps perdu sur les tâches répétitives</div>
               </div>
-              <div class="code-line"><span class="code-k">import</span> <span class="code-s">{ n8n, openclaw, mcp
-                  }</span>
-                <span class="code-k">from</span> <span class="code-s">'@olenceia/connectors'</span><span
-                  class="code-c">;</span>
+              <div class="intro__stat">
+                <div class="intro__stat-n">3×</div>
+                <div class="intro__stat-l">Capacité de traitement sans embauche</div>
               </div>
-              <div class="code-line">&nbsp;</div>
-              <div class="code-line"><span class="code-k">export async function</span> <span
-                  class="code-fn">bootstrap</span><span class="code-c">() {</span></div>
-              <div class="code-line"> <span class="code-k">const</span> flow <span class="code-c">=</span> <span
-                  class="code-k">await</span> <span class="code-fn">n8n</span><span class="code-c">.</span><span
-                  class="code-fn">compose</span><span class="code-c">({</span></div>
-              <div class="code-line"> triggers: [<span class="code-s">'crm'</span>, <span
-                  class="code-s">'ticketing'</span>, <span class="code-s">'webhook'</span>],</div>
-              <div class="code-line"> ai: <span class="code-fn">openclaw</span><span class="code-c">.</span><span
-                  class="code-fn">agent</span><span class="code-c">({ memory: </span><span
-                  class="code-s">'hybrid'</span> <span class="code-c">}),</span></div>
-              <div class="code-line"> tools: <span class="code-fn">mcp</span><span class="code-c">.</span><span
-                  class="code-fn">bridge</span><span class="code-c">(</span><span class="code-num">12</span><span
-                  class="code-c">)</span></div>
-              <div class="code-line"> <span class="code-c">});</span></div>
-              <div class="code-line"> <span class="code-k">return</span> flow<span class="code-c">.</span><span
-                  class="code-fn">deploy</span><span class="code-c">({ region: </span><span
-                  class="code-s">'eu'</span><span class="code-c"> });</span></div>
-              <div class="code-line"><span class="code-c">}</span></div>
+              <div class="intro__stat">
+                <div class="intro__stat-n">24/7</div>
+                <div class="intro__stat-l">Systèmes actifs sans intervention</div>
+              </div>
+              <div class="intro__stat">
+                <div class="intro__stat-n">+ROI</div>
+                <div class="intro__stat-l">Retour sur investissement dès le 1er mois</div>
+              </div>
             </div>
           </div>
 
-          <div class="space-y-6">
-            <article class="card" data-reveal>
-              <h3 class="h3"><span class="text-[hsl(var(--theme-hsl))]">&lt;</span> Pourquoi Olence IA <span
-                  class="text-[hsl(var(--theme-hsl))]">/&gt;</span></h3>
-              <p class="mt-3 text-white/80">
-                L’innovation utile, c’est celle qui réduit la friction : moins de ressaisie, moins d’erreurs humaines,
-                plus de visibilité sur les flux. Nous privilégions des briques <span class="text-white">open</span> et
-                observables, pour que vous restiez maître de votre stack.
-              </p>
-            </article>
-            <div class="olence-img-wrap" data-reveal>
-              <img src="./assets/automatisation.png" alt="Schéma d’automatisation et flux de données" loading="lazy" />
-              <div class="olence-img-caption">Automatisation bout-en-bout : déclencheurs, règles, supervision.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STACK VISUEL -->
-    <section id="olence-stack" class="section" data-theme="282 88% 62%" data-theme-name="Violet intégration">
-      <div class="mx-auto max-w-6xl px-4">
-        <div class="section-head">
-          <p class="eyebrow">Écosystème</p>
-          <h2 class="h2">Technologies et protocoles que nous activons.</h2>
-          <p class="lead">
-            Sélection pragmatique : orchestration low-code, agents avec outils, chatbots alignés sur vos API, et
-            déploiements résilients.
-          </p>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-3">
-          <div class="olence-img-wrap" data-reveal>
-            <img src="./assets/ai-workflow-automationA--1-.png" alt="Workflows et automatisation IA" loading="lazy" />
-          </div>
-          <div class="olence-img-wrap" data-reveal>
-            <img src="./assets/ai-agent.webp" alt="Agent IA et orchestration" loading="lazy" />
-          </div>
-          <div class="olence-img-wrap" data-reveal>
-            <img src="./assets/workflow_ecosystem.webp" alt="Écosystème d’intégrations" loading="lazy" />
-          </div>
-        </div>
-
-        <div class="tech-orbit mt-10" data-reveal>
-          <div class="tech-orbit-inner">
-            <span class="tech-pill-olence">n8n</span>
-            <span class="tech-pill-olence">OpenClaw</span>
-            <span class="tech-pill-olence">MCP</span>
-            <span class="tech-pill-olence">Webhooks &amp; REST</span>
-            <span class="tech-pill-olence">Chatbots métiers</span>
-            <span class="tech-pill-olence">Docker</span>
-            <span class="tech-pill-olence">Kubernetes</span>
-            <span class="tech-pill-olence">Microservices</span>
-            <span class="tech-pill-olence">LLM &amp; RAG</span>
-            <span class="tech-pill-olence">Observabilité</span>
-          </div>
-        </div>
-
-        <div class="olence-marquee-wrap" aria-hidden="true">
-          <div class="olence-marquee-track">
-            <span>n8n • OpenClaw • MCP • API • Chatbots • Event-driven • Microservices • Sécurité • n8n • OpenClaw • MCP
-              •
-              API •</span>
-            <span>n8n • OpenClaw • MCP • API • Chatbots • Event-driven • Microservices • Sécurité • n8n • OpenClaw • MCP
-              •
-              API •</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES DÉTAILLÉS -->
-    <section id="olence-services" class="section" data-theme="14 92% 58%" data-theme-name="Ambre produit">
-      <div class="mx-auto max-w-6xl px-4">
-        <div class="section-head">
-          <p class="eyebrow">Services</p>
-          <h2 class="h2">Ce que nous livrons concrètement.</h2>
-          <p class="lead">
-            Des blocs modulaires — vous pouvez démarrer par un workflow critique, puis étendre vers l’agentique et le
-            multi-service.
-          </p>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-12">
-          <article class="card service-card-olence md:col-span-6" data-reveal>
-            <div class="service-icon">
-              <img src="https://cdn.simpleicons.org/n8n/EA4B71" width="32" height="32" alt="" />
-            </div>
-            <h3 class="h3">Workflows n8n</h3>
-            <p class="mt-3 text-white/80">
-              Conception de scénarios <span class="text-white">fair-code</span> : intégration CRM, facturation, support,
-              e-mail et bases de données. Nœuds IA pour enrichir ou classer sans quitter l’orchestrateur. Idéal pour un
-              time-to-value rapide avec traçabilité des exécutions.
-            </p>
-          </article>
-
-          <article class="card service-card-olence md:col-span-6" data-reveal>
-            <div class="service-icon">
-              <img src="./assets/Ia-agent_text_designed.png" alt="" class="!h-9 !w-9 object-contain" width="36"
-                height="36" />
-            </div>
-            <h3 class="h3">Agents OpenClaw</h3>
-            <p class="mt-3 text-white/80">
-              Mise en place d’<span class="text-white">agents IA</span> orientés tâches : mémoire structurée, outils
-              (dont
-              <abbr title="Model Context Protocol">MCP</abbr>), routage multi-modèles et canaux (messagerie, webhooks).
-              Approche <span class="text-white">local-first</span> possible pour les données sensibles, avec politiques
-              de secrets et sandboxing — aligné sur les pratiques production 2026 (supervision, garde-fous réseau).
-            </p>
-          </article>
-
-          <article class="card service-card-olence md:col-span-4" data-reveal>
-            <div class="service-icon">
-              <img src="./assets/mcp-com-make.webp" alt="" class="!h-9 !w-9 object-cover rounded-md" width="36"
-                height="36" />
-            </div>
-            <h3 class="h3">MCP &amp; outils</h3>
-            <p class="mt-3 text-white/80">
-              Ponts <abbr title="Model Context Protocol">MCP</abbr> pour brancher vos bases, tickets et APIs sur des
-              modèles conversationnels — le bon niveau d’abstraction entre « prompt » et « système d’information ».
-            </p>
-          </article>
-
-          <article class="card service-card-olence md:col-span-4" data-reveal>
-            <div class="service-icon">
-              <img src="./assets/Hands-On_MCP_Projects.webp" alt="" class="!h-9 !w-9 object-cover rounded-md" width="36"
-                height="36" />
-            </div>
-            <h3 class="h3">Chatbots métiers</h3>
-            <p class="mt-3 text-white/80">
-              Assistants connectés à <span class="text-white">votre réalité opérationnelle</span> : stocks, commandes,
-              SLA, procédures internes. Réponses contextualisées, escalade humaine, journaux d’audit.
-            </p>
-          </article>
-
-          <article class="card service-card-olence md:col-span-4" data-reveal>
-            <div class="service-icon">
-              <img src="https://cdn.simpleicons.org/docker/2496ED" width="32" height="32" alt="" />
-            </div>
-            <h3 class="h3">Apps &amp; microservices</h3>
-            <p class="mt-3 text-white/80">
-              Développement d’<span class="text-white">applications d’entreprise</span> découpées en services, contrats
-              d’API explicites, déploiements conteneurisés et scalabilité horizontale — prêt pour les équipes DevOps.
-            </p>
-          </article>
-        </div>
-
-        <div class="mt-10 grid gap-6 lg:grid-cols-2">
-          <div class="olence-img-wrap" data-reveal>
-            <img src="./assets/mcp_text_presentation.png" alt="Présentation du protocole MCP et intégrations"
+          <!-- Illustration -->
+          <div class="intro__img" data-reveal>
+            <img
+              src="./assets/automatisation.png"
+              alt="Schéma d'automatisation de flux de données"
               loading="lazy" />
-            <div class="olence-img-caption">MCP : standardiser l’accès des modèles à vos outils métiers.</div>
-          </div>
-          <div class="olence-img-wrap" data-reveal>
-            <img src="./assets/AI-human_scaled.jpg" alt="Collaboration humain et IA" loading="lazy" />
-            <div class="olence-img-caption">IA comme co-pilote : l’humain valide, le système exécute.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ARCHITECTURE -->
-    <section id="olence-archi" class="section" data-theme="210 90% 58%" data-theme-name="Bleu système">
-      <div class="mx-auto max-w-6xl px-4">
-        <div class="section-head">
-          <p class="eyebrow">Architecture</p>
-          <h2 class="h2">Microservices, messages, résilience.</h2>
-          <p class="lead">
-            Nous dessinons des frontières claires entre domaines : chaque service expose une API stable, les événements
-            circulent sur des bus maîtrisés, et l’observabilité (logs, métriques, traces) n’est pas un ajout de fin de
-            projet.
+    <!-- ═══════════════════════════════════════════════════════════════
+         SERVICES — Les 3 offres phares
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="services o-section" id="olence-services" aria-label="Nos services">
+      <div class="o-container">
+
+        <div class="services__head" data-reveal>
+          <p class="o-eyebrow">Ce que nous livrons</p>
+          <h2 class="o-h2">Trois services pour multiplier votre impact.</h2>
+          <p class="o-lead">
+            Des solutions concrètes, déployées rapidement, conçues pour s'intégrer
+            à votre existant sans friction.
           </p>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-12">
-          <div class="card md:col-span-7" data-reveal>
-            <h3 class="h3">Principes</h3>
-            <ul class="mt-4 space-y-3 text-white/80">
-              <li class="flex gap-3"><span class="dot"></span><span><span class="text-white">Découplage</span> : moins
-                  de
-                  déploiements monolithiques bloquants.</span></li>
-              <li class="flex gap-3"><span class="dot"></span><span><span class="text-white">Contrats</span> : schémas
-                  OpenAPI, versioning, compatibilité ascendante.</span></li>
-              <li class="flex gap-3"><span class="dot"></span><span><span class="text-white">Sécurité</span> : auth
-                  fédérée, moindre privilège, secrets hors du code.</span></li>
-            </ul>
-          </div>
-          <aside class="card md:col-span-5" data-reveal>
-            <h3 class="h3">Livrables types</h3>
-            <p class="mt-3 text-white/80">
-              Cartographie des flux, runbooks, pipelines CI/CD, environnements de staging — pour que l’équipe IT
-              reprenne le flambeau sans reverse-engineering.
-            </p>
-            <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div class="text-xs text-white/60">Angle mort à éviter</div>
-              <div class="mt-1 text-sm font-semibold leading-snug">
-                « Belle démo » sans monitoring ni ownership des données — nous priorisons l’exploitable.
+        <div class="o-grid-3">
+
+          <!-- Service 1 : Automatisation -->
+          <article class="service-card" data-reveal>
+            <div class="service-card__img">
+              <img
+                src="./assets/ai-workflow-automationA--1-.png"
+                alt="Illustration de services d'automatisation"
+                loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <div class="service-card__num">01 / Automatisation</div>
+              <h3 class="service-card__title">Création de services d'automatisation</h3>
+              <p class="service-card__desc">
+                Nous concevons des workflows sur mesure qui orchestrent vos CRM, outils de
+                facturation, support client et bases de données. Chaque scénario est audité,
+                documenté et maintenable — du déclencheur à l'action finale.
+              </p>
+              <div class="service-card__tags">
+                <span class="service-card__tag">Workflows</span>
+                <span class="service-card__tag">n8n</span>
+                <span class="service-card__tag">API REST</span>
+                <span class="service-card__tag">Webhooks</span>
               </div>
             </div>
-          </aside>
+          </article>
+
+          <!-- Service 2 : Chatbot -->
+          <article class="service-card" data-reveal>
+            <div class="service-card__img">
+              <img
+                src="./assets/Ia-agent_text_designed.png"
+                alt="Illustration d'intégration d'un chatbot IA"
+                loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <div class="service-card__num">02 / Chatbot</div>
+              <h3 class="service-card__title">Intégration d'un chatbot dans votre application</h3>
+              <p class="service-card__desc">
+                Nous intégrons un agent conversationnel directement dans votre produit existant.
+                Connecté à vos données (stocks, commandes, SLA, procédures), il répond 24/7,
+                escalade vers un humain et génère des journaux d'audit complets.
+              </p>
+              <div class="service-card__tags">
+                <span class="service-card__tag">LLM</span>
+                <span class="service-card__tag">RAG</span>
+                <span class="service-card__tag">Agents IA</span>
+                <span class="service-card__tag">MCP</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 3 : Analyse de données -->
+          <article class="service-card" data-reveal>
+            <div class="service-card__img">
+              <img
+                src="./assets/AI-human_scaled.jpg"
+                alt="Illustration d'analyse de données utilisateurs"
+                loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <div class="service-card__num">03 / Data</div>
+              <h3 class="service-card__title">Analyse de données utilisateurs pour le service client</h3>
+              <p class="service-card__desc">
+                Nous analysons vos logs, tickets et interactions pour identifier les points
+                de friction, anticiper les demandes et personnaliser les réponses.
+                Résultat : un service client plus rapide, plus précis, moins coûteux.
+              </p>
+              <div class="service-card__tags">
+                <span class="service-card__tag">Data Pipeline</span>
+                <span class="service-card__tag">BI</span>
+                <span class="service-card__tag">Observabilité</span>
+                <span class="service-card__tag">Insights</span>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="olence-contact" class="section pb-28" data-theme="168 84% 48%" data-theme-name="Émeraude IA">
-      <div class="mx-auto max-w-6xl px-4">
-        <div class="section-head">
-          <p class="eyebrow">Contact</p>
-          <h2 class="h2">Parlons de votre prochain flux automatisé.</h2>
-          <p class="lead">
-            Olence IA accompagne les organisations qui veulent passer de l’expérimentation à la valeur récurrente — avec
-            la
-            même rigueur que sur un produit logiciel classique.
+    <!-- ═══════════════════════════════════════════════════════════════
+         PROJETS RÉALISÉS
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="projects o-section" id="olence-projets" aria-label="Projets réalisés">
+      <div class="o-container">
+
+        <div class="projects__head" data-reveal>
+          <p class="o-eyebrow">Ils nous font confiance</p>
+          <h2 class="o-h2" style="margin-top:0.75rem;">Quelques projets déjà livrés.</h2>
+          <p class="o-lead" style="margin-top:0.75rem;">
+            Des produits concrets, déployés, utilisés. Chaque projet est la preuve
+            que l'automatisation IA peut s'appliquer à votre secteur.
           </p>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-12">
-          <div class="card md:col-span-7" data-reveal>
-            <h3 class="h3">Échanger avec Arthur (portfolio)</h3>
-            <p class="mt-3 text-white/80">
-              Pour une mission, un audit rapide ou un POC : utilisez les coordonnées du portfolio principal.
-            </p>
-            <div class="mt-6 flex flex-wrap gap-3">
-              <a class="btn btn-primary" href="./src/html/portfolio.html#contact">Ouvrir la page contact</a>
-              <a class="btn" href="mailto:ateufoarthur@gmail.com">ateufoarthur@gmail.com</a>
+        <div class="projects__grid">
+
+          <article class="project-card" data-reveal>
+            <img
+              class="project-card__logo"
+              src="./assets/Logo_mboacach.png"
+              alt="Logo Mboa Cash"
+              loading="lazy" />
+            <div>
+              <div class="project-card__name">Mboa Cash</div>
+              <div class="project-card__type">Fintech &bull; Paiement mobile</div>
             </div>
-          </div>
-          <div class="card md:col-span-5 flex flex-col justify-center" data-reveal>
-            <img src="./assets/olenceia.png" alt="Olence IA"
-              class="mx-auto max-h-24 w-auto object-contain opacity-95" />
-            <p class="mt-4 text-center text-sm text-white/65">
-              Olence IA — automatisation &amp; intelligence artificielle.
-            </p>
-          </div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <img
+              class="project-card__logo"
+              src="./assets/planora_logo.png"
+              alt="Logo Planora"
+              loading="lazy" />
+            <div>
+              <div class="project-card__name">Planora</div>
+              <div class="project-card__type">SaaS &bull; Gestion de projets</div>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <img
+              class="project-card__logo"
+              src="./assets/jobbersfind_logo_form.png"
+              alt="Logo JobberFind"
+              loading="lazy" />
+            <div>
+              <div class="project-card__name">JobberFind</div>
+              <div class="project-card__type">Marketplace &bull; Emploi</div>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <img
+              class="project-card__logo"
+              src="./assets/eticketer_logo.png"
+              alt="Logo eTicketer"
+              loading="lazy" />
+            <div>
+              <div class="project-card__name">eTicketer</div>
+              <div class="project-card__type">Événementiel &bull; Billetterie</div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         CONTACT / CTA
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="cta-section o-section" id="olence-contact" aria-label="Nous contacter">
+      <div class="o-container">
+
+        <div data-reveal>
+          <p class="o-eyebrow">Passons à l'action</p>
+          <h2 class="o-h2" style="margin-top:0.75rem;">
+            Prêt à automatiser votre croissance&nbsp;?
+          </h2>
+          <p class="o-lead">
+            Discutons de votre projet. Audit rapide, proof of concept ou déploiement complet —
+            nous nous adaptons à votre rythme.
+          </p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-top:2rem;">
+            <a class="o-btn o-btn-primary" href="./src/html/portfolio.html#contact">
+              Ouvrir la page contact
+            </a>
+            <a class="o-btn" href="mailto:ateufoarthur@gmail.com">
+              ateufoarthur@gmail.com
+            </a>
+          </div>
+
+          <a class="cta-section__email" href="mailto:ateufoarthur@gmail.com" aria-label="Envoyer un e-mail">
+            <span aria-hidden="true">✉</span> ateufoarthur@gmail.com
+          </a>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
-  <footer class="pb-10">
-    <div class="mx-auto max-w-6xl px-4">
-      <div
-        class="flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
-        <div>© <span id="year"></span> Olence IA</div>
-        <div class="flex items-center gap-3">
-          <span class="inline-flex items-center gap-2">
-            <span class="h-2 w-2 rounded-full bg-[hsl(var(--theme-hsl))]"></span>
-            <span id="themeLabel">Thème</span>
-          </span>
-          <span class="hidden md:inline">•</span>
-          
-            <a class="chip chip-primary hidden sm:flex" href="./src/html/portfolio.html#contact">Portfolio Arthur</a>
-        </div>
+  <!-- ═══════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════ -->
+  <footer class="o-footer">
+    <div class="o-container">
+      <div class="o-footer__inner">
+        <p class="o-footer__copy">
+          &copy; <span id="olence-year"></span> Olence IA — Automatisation &amp; IA
+        </p>
+        <nav class="o-footer__links" aria-label="Liens du pied de page">
+          <a class="o-footer__link" href="./src/html/portfolio.html">Portfolio Arthur ATEUFO</a>
+          <a class="o-footer__link" href="mailto:ateufoarthur@gmail.com">Contact</a>
+        </nav>
       </div>
     </div>
   </footer>
 
-  <script src="./src/script/gsap.min.js"></script>
-  <script src="./src/script/ScrollTrigger.min.js"></script>
-  <script src="./src/script/olenceia.js"></script>
+  <script src="./src/script/olence.js"></script>
 </body>
 
 </html>

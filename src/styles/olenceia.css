@@ -252,4 +252,45 @@
 
 #mobile-menu-toggle .menu-icon.hidden {
   display: none;
+} display: none;
+}
+
+/* Luxury style: square borders everywhere */
+.olence-page .card,
+.olence-page .card::before,
+.olence-page .btn,
+.olence-page .btn-icon,
+.olence-page .chip,
+.olence-page .nav-link,
+.olence-page .nav-link-vert,
+.olence-page .service-icon,
+.olence-page .tech-orbit,
+.olence-page .tech-pill-olence,
+.olence-page .portrait-frame,
+.olence-page .portrait-frame::after,
+.olence-page .portrait,
+.olence-page .portrait-badge,
+.olence-page .badge,
+.olence-page .pill,
+.olence-page .code-dock,
+.olence-page .olence-img-wrap,
+.olence-page .olence-img-caption,
+.olence-page .marquee,
+.olence-page .project-card,
+.olence-page .project-card::before,
+.olence-page .skill,
+.olence-page .contact,
+.olence-page .code-dot {
+  border-radius: 0 !important;
+}
+
+.olence-page .nav-link-vert {
+  display: block;
+  font-size: 14px;
+}
+
+.olence-page .nav-link-vert.is-active {
+  font-weight: 800;
+  border-left: 2px solid currentColor;
+  padding-left: 10px;
 }
