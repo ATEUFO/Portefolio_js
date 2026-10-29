@@ -119,4 +119,4 @@ Je possède une solide compréhension des menaces numériques et des protocoles 
 ---
 *Document généré pour la présentation de profil technique - 2026*
 
-check 1
+check 2
